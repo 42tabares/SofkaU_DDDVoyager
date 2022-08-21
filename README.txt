@@ -1,10 +1,19 @@
-El protecto es la simulacion de un juego de tenis,
-uno de los agregados es el juego como tal y gestiona las entidad jugador,
-recoge pelotas y referi.
-y el otro agregado es Complementos y gestiona ls entidades cancha, raqueta y
-pelota, elementos necesarios para el juego.
+# Sofka U Voyager Hotel Management
+## DDD Technical challenge
 
-los estan los 12 casos de uso, 10 por comandos y 2 por eventos.
-y la covertura quedó al 100%.
+Feel free to check the Big Picture Diagram and Domain Model Here:
 
-Gracias por el acompañamiento y las enseñanzas.
+https://drive.google.com/file/d/1-cIRkMx1P5DGuXojrSE-y2AywkPPcG4h/view?usp=sharing
+
+### 6:00pm features finished:
+
+-Hotel / restaurant VOs and Entities fully defined with their commands but not yet working
+-Room Events/Commands working 100%
+-CreateRoomUseCase unit test Working at 100% coverage
+
+### Missing features as of 6:00 pm:
+
+- Most of the HotelChange and RestaurantChange classes
+- 9 command Usecases with their respective tests
+- 2 event Usecases with their respective tests
+
