@@ -4,6 +4,7 @@ import co.com.sofka.domain.generic.DomainEvent;
 import com.sofkaU.voyagerddd.domain.general.Name;
 import com.sofkaU.voyagerddd.domain.hotel.values.EmployeeID;
 import com.sofkaU.voyagerddd.domain.hotel.values.EmployeeRole;
+import com.sofkaU.voyagerddd.domain.hotel.values.HotelID;
 
 public class EmployeeAdded extends DomainEvent {
 

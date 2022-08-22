@@ -2,10 +2,8 @@ package com.sofkaU.voyagerddd.domain.room;
 
 import co.com.sofka.domain.generic.Entity;
 import com.sofkaU.voyagerddd.domain.general.Cost;
-import com.sofkaU.voyagerddd.domain.room.values.HotelID;
 import com.sofkaU.voyagerddd.domain.room.values.InvoiceID;
 import com.sofkaU.voyagerddd.domain.room.values.InvoiceList;
-import com.sofkaU.voyagerddd.domain.room.values.RoomID;
 
 public class Invoice extends Entity<InvoiceID> {
 

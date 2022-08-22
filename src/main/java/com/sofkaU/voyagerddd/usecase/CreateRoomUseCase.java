@@ -12,6 +12,7 @@ public class CreateRoomUseCase extends UseCase<RequestCommand<CreateRoom>, Respo
         var command = createRoomRequestCommand.getCommand();
         var room = new Room(
                 command.getRoomID(),
+                command.getHotelID(),
                 command.getRoomNumber(),
                 command.getCost()
         );

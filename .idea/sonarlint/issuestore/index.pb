@@ -28,6 +28,4 @@ Ksrc/main/java/com/sofkaU/voyagerddd/domain/restaurant/events/ChefAdded.java,3\
 ~
 Nsrc/main/java/com/sofkaU/voyagerddd/domain/restaurant/events/ProductAdded.java,2\5\253e904da2e154379dbf79a93dbb42052f0f3421
 „
-Tsrc/main/java/com/sofkaU/voyagerddd/domain/restaurant/events/ProductCostUpdated.java,2\6\2626fd7b12cc0a3c67d96a0351ffb92817c23a24
-„
 Tsrc/main/java/com/sofkaU/voyagerddd/domain/restaurant/events/ProductNameUpdated.java,1\b\1b0483d72c89e34084f963d20aae4e54bd9fbd28

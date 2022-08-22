@@ -1,7 +1,7 @@
 package com.sofkaU.voyagerddd.domain.room.commands;
 
 import co.com.sofka.domain.generic.Command;
-import com.sofkaU.voyagerddd.domain.room.values.HotelID;
+import com.sofkaU.voyagerddd.domain.hotel.values.HotelID;
 import com.sofkaU.voyagerddd.domain.room.values.InvoiceList;
 import com.sofkaU.voyagerddd.domain.room.values.RoomID;
 

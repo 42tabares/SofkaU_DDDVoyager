@@ -2,7 +2,6 @@ package com.sofkaU.voyagerddd.domain.room.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofkaU.voyagerddd.domain.general.Cost;
-import com.sofkaU.voyagerddd.domain.room.values.HotelID;
 import com.sofkaU.voyagerddd.domain.room.values.InvoiceID;
 
 public class InvoiceCostUpdated extends DomainEvent {

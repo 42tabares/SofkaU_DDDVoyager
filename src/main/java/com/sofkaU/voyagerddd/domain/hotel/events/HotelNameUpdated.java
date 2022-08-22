@@ -22,4 +22,6 @@ public class HotelNameUpdated extends DomainEvent {
     public HotelName getHotelName() {
         return hotelName;
     }
+
+
 }

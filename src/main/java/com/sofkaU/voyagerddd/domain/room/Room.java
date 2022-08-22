@@ -28,14 +28,17 @@ import java.util.Set;
 
 public class Room extends AggregateEvent<RoomID> {
 
+    protected HotelID hotelID;
     protected RoomNumber roomNumber;
     protected Cost cost;
     protected Invoice invoice;
     protected Set<Reservation> reservations;
 
-    public Room(RoomID entityId, RoomNumber roomNumber, Cost cost) {
+    public Room(RoomID entityId, HotelID hotelID, RoomNumber roomNumber, Cost cost) {
         super(entityId);
-        appendChange(new RoomCreated(entityId,roomNumber,cost)).apply();
+        this.hotelID = hotelID;
+        this.roomNumber = roomNumber;
+        this.cost = cost;
     }
 
     private Room(RoomID roomID){

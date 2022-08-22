@@ -14,4 +14,12 @@ public class EmployeeRoleUpdated extends DomainEvent {
         this.employeeID = employeeID;
         this.employeeRole = employeeRole;
     }
+
+    public EmployeeID getEmployeeID() {
+        return employeeID;
+    }
+
+    public EmployeeRole getEmployeeRole() {
+        return employeeRole;
+    }
 }
