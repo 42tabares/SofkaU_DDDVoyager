@@ -9,23 +9,14 @@ import com.sofkaU.voyagerddd.domain.restaurant.values.RestaurantID;
 
 public class Chef extends Entity<ChefID> {
 
-    private RestaurantID restaurantID;
+    private RestaurantID entityId;
     private Name chefName;
     private ChefSpecialty chefSpecialty;
 
-    public Chef(ChefID entityId, RestaurantID restaurantIDM, Name chefName, ChefSpecialty chefSpecialty) {
+    public Chef(ChefID entityId, Name chefName, ChefSpecialty chefSpecialty) {
         super(entityId);
-        this.restaurantID = restaurantIDM;
         this.chefName = chefName;
         this.chefSpecialty = chefSpecialty;
-    }
-
-    public RestaurantID getRestaurantIDM() {
-        return restaurantID;
-    }
-
-    public void setRestaurantIDM(RestaurantID restaurantIDM) {
-        this.restaurantID = restaurantIDM;
     }
 
     public Name getChefName() {

@@ -25,8 +25,6 @@ Fsrc/main/java/com/sofkaU/voyagerddd/domain/room/values/RoomNumber.java,8\e\8e3
 Qsrc/main/java/com/sofkaU/voyagerddd/domain/restaurant/events/ChefNameUpdated.java,0\2\025f76873efce0f03cdfa3e1ecc76a53e2367b4d
 {
 Ksrc/main/java/com/sofkaU/voyagerddd/domain/restaurant/events/ChefAdded.java,3\2\32b1893fa4da909d0576e4cc6e746c4a0a772a64
-†
-Vsrc/main/java/com/sofkaU/voyagerddd/domain/restaurant/events/ChefSpecialtyUpdated.java,c\1\c1be733aca77c46b3b5d132a488dc1ff1a43a7cd
 ~
 Nsrc/main/java/com/sofkaU/voyagerddd/domain/restaurant/events/ProductAdded.java,2\5\253e904da2e154379dbf79a93dbb42052f0f3421
 „

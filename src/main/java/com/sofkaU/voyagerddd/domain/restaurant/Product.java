@@ -9,19 +9,14 @@ import com.sofkaU.voyagerddd.domain.restaurant.values.RestaurantID;
 
 public class Product extends Entity<ProductID> {
 
-    private RestaurantID restaurantID;
+    private RestaurantID enityId;
     private ProductName productName;
     private Cost cost;
 
-    public Product(ProductID entityId, RestaurantID restaurantID, ProductName productName, Cost cost) {
+    public Product(ProductID entityId, ProductName productName, Cost cost) {
         super(entityId);
-        this.restaurantID = restaurantID;
         this.productName = productName;
         this.cost = cost;
-    }
-
-    public RestaurantID getRestaurantID() {
-        return restaurantID;
     }
 
     public ProductName getProductName() {
@@ -32,9 +27,6 @@ public class Product extends Entity<ProductID> {
         return cost;
     }
 
-    public void setRestaurantID(RestaurantID restaurantID) {
-        this.restaurantID = restaurantID;
-    }
 
     public void setProductName(ProductName productName) {
         this.productName = productName;
