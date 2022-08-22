@@ -8,23 +8,13 @@ import com.sofkaU.voyagerddd.domain.hotel.values.ServiceName;
 
 public class Service extends Entity<ServiceID> {
 
-    private HotelID hotelID;
     private ServiceName serviceName;
     private Cost cost;
 
-    public Service(ServiceID entityId, HotelID hotelID, ServiceName serviceName, Cost cost) {
+    public Service(ServiceID entityId, ServiceName serviceName, Cost cost) {
         super(entityId);
-        this.hotelID = hotelID;
         this.serviceName = serviceName;
         this.cost = cost;
-    }
-
-    public HotelID getHotelID() {
-        return hotelID;
-    }
-
-    public void setHotelID(HotelID hotelID) {
-        this.hotelID = hotelID;
     }
 
     public ServiceName getServiceName() {

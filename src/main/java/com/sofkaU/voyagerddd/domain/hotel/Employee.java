@@ -8,19 +8,13 @@ import com.sofkaU.voyagerddd.domain.hotel.values.HotelID;
 
 public class Employee extends Entity<EmployeeID> {
 
-    private HotelID hotelID;
     private Name name;
     private EmployeeRole employeeRole;
 
-    public Employee(EmployeeID entityId, HotelID hotelID, Name name, EmployeeRole employeeRole) {
+    public Employee(EmployeeID entityId, Name name, EmployeeRole employeeRole) {
         super(entityId);
-        this.hotelID = hotelID;
         this.name = name;
         this.employeeRole = employeeRole;
-    }
-
-    public HotelID getHotelID() {
-        return hotelID;
     }
 
     public Name getName() {
@@ -29,10 +23,6 @@ public class Employee extends Entity<EmployeeID> {
 
     public EmployeeRole getEmployeeRole() {
         return employeeRole;
-    }
-
-    public void setHotelID(HotelID hotelID) {
-        this.hotelID = hotelID;
     }
 
     public void setName(Name name) {

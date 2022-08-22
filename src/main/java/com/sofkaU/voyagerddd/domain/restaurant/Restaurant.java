@@ -34,7 +34,7 @@ public class Restaurant extends AggregateEvent<RestaurantID> {
 
     public Restaurant(RestaurantID entityId, HotelID hotelID, RestaurantName restaurantName) {
         super(entityId);
-        appendChange(new RestaurantCreated(hotelID,restaurantName)).apply();
+        appendChange(new RestaurantCreated(hotelID,entityId,restaurantName)).apply();
     }
 
     private Restaurant(RestaurantID restaurantID){
