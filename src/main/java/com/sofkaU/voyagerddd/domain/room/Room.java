@@ -36,9 +36,8 @@ public class Room extends AggregateEvent<RoomID> {
 
     public Room(RoomID entityId, HotelID hotelID, RoomNumber roomNumber, Cost cost) {
         super(entityId);
-        this.hotelID = hotelID;
-        this.roomNumber = roomNumber;
-        this.cost = cost;
+        subscribe(new RoomChange(this));
+        appendChange(new RoomCreated(hotelID, roomNumber, cost));
     }
 
     private Room(RoomID roomID){

@@ -4,14 +4,7 @@ import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofkaU.voyagerddd.domain.general.Cost;
 import com.sofkaU.voyagerddd.domain.general.Name;
-import com.sofkaU.voyagerddd.domain.hotel.events.EmployeeAdded;
-import com.sofkaU.voyagerddd.domain.hotel.events.EmployeeNameUpdated;
-import com.sofkaU.voyagerddd.domain.hotel.events.EmployeeRoleUpdated;
-import com.sofkaU.voyagerddd.domain.hotel.events.HotelCreated;
-import com.sofkaU.voyagerddd.domain.hotel.events.HotelNameUpdated;
-import com.sofkaU.voyagerddd.domain.hotel.events.ServiceAdded;
-import com.sofkaU.voyagerddd.domain.hotel.events.ServiceCostUpdated;
-import com.sofkaU.voyagerddd.domain.hotel.events.ServiceNameUpdated;
+import com.sofkaU.voyagerddd.domain.hotel.events.*;
 import com.sofkaU.voyagerddd.domain.hotel.values.EmployeeID;
 import com.sofkaU.voyagerddd.domain.hotel.values.EmployeeRole;
 import com.sofkaU.voyagerddd.domain.hotel.values.HotelID;
@@ -42,6 +35,7 @@ public class Hotel extends AggregateEvent<HotelID> {
 
     public Hotel(HotelID entityId, HotelName hotelName) {
         super(entityId);
+        subscribe(new HotelChange(this));
         appendChange(new HotelCreated(hotelName)).apply();
     }
 
@@ -54,6 +48,11 @@ public class Hotel extends AggregateEvent<HotelID> {
         var hotel = new Hotel(hotelID);
         events.forEach(hotel::applyEvent);
         return hotel;
+    }
+
+    public void appendRoomID(RoomID roomID){
+        Objects.requireNonNull(roomID);
+        appendChange(new RoomAssigned(roomID)).apply();
     }
 
     public void addEmployee(EmployeeID entityID, Name name, EmployeeRole role){

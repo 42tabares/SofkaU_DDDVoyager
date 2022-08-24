@@ -1,14 +1,7 @@
 package com.sofkaU.voyagerddd.domain.hotel;
 
 import co.com.sofka.domain.generic.EventChange;
-import com.sofkaU.voyagerddd.domain.hotel.events.EmployeeAdded;
-import com.sofkaU.voyagerddd.domain.hotel.events.EmployeeNameUpdated;
-import com.sofkaU.voyagerddd.domain.hotel.events.EmployeeRoleUpdated;
-import com.sofkaU.voyagerddd.domain.hotel.events.HotelCreated;
-import com.sofkaU.voyagerddd.domain.hotel.events.HotelNameUpdated;
-import com.sofkaU.voyagerddd.domain.hotel.events.ServiceAdded;
-import com.sofkaU.voyagerddd.domain.hotel.events.ServiceCostUpdated;
-import com.sofkaU.voyagerddd.domain.hotel.events.ServiceNameUpdated;
+import com.sofkaU.voyagerddd.domain.hotel.events.*;
 import com.sofkaU.voyagerddd.domain.restaurant.events.RestaurantCreated;
 import com.sofkaU.voyagerddd.domain.room.events.RoomCreated;
 
@@ -30,7 +23,7 @@ public class HotelChange extends EventChange {
             hotel.hotelName = event.getHotelName();
         });
 
-        apply((RoomCreated event) ->{
+        apply((RoomAssigned event) -> {
             hotel.rooms.add(event.getRoomID());
         });
 

@@ -9,13 +9,11 @@ import com.sofkaU.voyagerddd.domain.room.values.RoomNumber;
 public class RoomCreated extends DomainEvent {
 
     private final HotelID hotelID;
-    private final RoomID roomID;
     private final RoomNumber roomNumber;
     private final Cost cost;
 
-    public RoomCreated(RoomID roomID,HotelID hotelID, RoomNumber roomNumber, Cost cost) {
+    public RoomCreated(HotelID hotelID, RoomNumber roomNumber, Cost cost) {
         super("room.RoomCreated");
-        this.roomID = roomID;
         this.hotelID = hotelID;
         this.roomNumber = roomNumber;
         this.cost = cost;
@@ -25,9 +23,6 @@ public class RoomCreated extends DomainEvent {
         return hotelID;
     }
 
-    public RoomID getRoomID() {
-        return roomID;
-    }
 
     public RoomNumber getRoomNumber() {
         return roomNumber;

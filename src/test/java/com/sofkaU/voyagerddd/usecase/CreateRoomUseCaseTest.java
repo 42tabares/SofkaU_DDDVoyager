@@ -23,9 +23,6 @@ class CreateRoomUseCaseTest {
     private final String HOTEL_ID = "ELYSIA1";
     private final String ROOM_ID = "ELYSIAÑ*1@";
 
-    @Mock
-    private DomainEventRepository repository;
-
     @Test
     void CreateRoomTest(){
 
@@ -48,7 +45,6 @@ class CreateRoomUseCaseTest {
         RoomCreated event = (RoomCreated) events.get(0);
 
         //Assert
-        assertEquals(ROOM_ID, event.getRoomID().value());
         assertEquals(101, event.getRoomNumber().value());
         assertEquals(100, event.getCost().value());
     }
