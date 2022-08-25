@@ -55,6 +55,11 @@ public class Hotel extends AggregateEvent<HotelID> {
         appendChange(new RoomAssigned(roomID)).apply();
     }
 
+    public void appendRestaurantID(RestaurantID restaurantID){
+        Objects.requireNonNull(restaurantID);
+        appendChange(new RestaurantAssigned(restaurantID)).apply();
+    }
+
     public void addEmployee(EmployeeID entityID, Name name, EmployeeRole role){
         Objects.requireNonNull(entityID);
         Objects.requireNonNull(name);

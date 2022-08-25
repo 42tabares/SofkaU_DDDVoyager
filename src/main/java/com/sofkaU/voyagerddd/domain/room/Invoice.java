@@ -7,13 +7,12 @@ import com.sofkaU.voyagerddd.domain.room.values.InvoiceList;
 
 public class Invoice extends Entity<InvoiceID> {
 
-    private InvoiceID invoiceID;
+
     private InvoiceList invoiceList;
     private Cost cost;
 
     public Invoice(InvoiceID entityId, InvoiceList invoiceList, Cost cost) {
         super(entityId);
-        this.invoiceID = entityId;
         this.invoiceList = invoiceList;
         this.cost = cost;
     }

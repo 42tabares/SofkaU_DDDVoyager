@@ -13,7 +13,7 @@ public class CreateRoom extends Command {
     private final RoomNumber roomNumber;
     private final Cost cost;
 
-    public CreateRoom( RoomID roomID, HotelID hotelID, RoomNumber roomNumber, Cost cost) {
+    public CreateRoom(RoomID roomID, HotelID hotelID, RoomNumber roomNumber, Cost cost) {
         this.hotelID = hotelID;
         this.roomID = roomID;
         this.roomNumber = roomNumber;

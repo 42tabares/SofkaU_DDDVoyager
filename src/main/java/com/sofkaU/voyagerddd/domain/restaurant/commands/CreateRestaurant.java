@@ -17,10 +17,10 @@ public class CreateRestaurant extends Command {
     private final RestaurantName restaurantName;
     private final RestaurantID restaurantID;
 
-    public CreateRestaurant(HotelID hotelID, RestaurantName restaurantName, RestaurantID restaurantID) {
+    public CreateRestaurant(RestaurantID restaurantID, HotelID hotelID, RestaurantName restaurantName) {
         this.hotelID = hotelID;
-        this.restaurantName = restaurantName;
         this.restaurantID = restaurantID;
+        this.restaurantName = restaurantName;
     }
 
     public HotelID getHotelID() {

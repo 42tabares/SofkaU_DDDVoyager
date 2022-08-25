@@ -6,7 +6,6 @@ import com.sofkaU.voyagerddd.domain.room.values.InvoiceID;
 import com.sofkaU.voyagerddd.domain.room.values.InvoiceList;
 
 public class InvoiceAdded extends DomainEvent {
-
     private final InvoiceID invoiceID;
     private final InvoiceList invoiceList;
     private final Cost cost;

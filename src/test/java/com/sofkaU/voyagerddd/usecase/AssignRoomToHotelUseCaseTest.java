@@ -24,14 +24,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
 class AssignRoomToHotelUseCaseTest {
-
-
     @Mock
     private DomainEventRepository repository;
 
-
     @Test
-    void test1(){
+    void RoomAssignmentTest(){
 
         //Arrange
         var HOTEL_ID = "33333";
@@ -62,5 +59,4 @@ class AssignRoomToHotelUseCaseTest {
         Assertions.assertEquals(result.getRoomID().value(), event.aggregateRootId());
         Mockito.verify(repository).getEventsBy(HOTEL_ID);
     }
-
 }

@@ -1,0 +1,9 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ŠÒ¥Œþÿÿÿÿ
+J
+java:S2387"."entityId" is the name of a field in "Entity".(ú¡¥c8¡úš˜¬0
+A
+java:S2160
+"+Override the "equals" method in this class.(ÌÜÖ±
+H
+java:S1068",Remove this unused "entityId" private field.(ú¡¥c8¦úš˜¬0

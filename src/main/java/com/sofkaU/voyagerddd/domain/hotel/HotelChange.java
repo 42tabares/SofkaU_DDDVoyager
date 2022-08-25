@@ -27,7 +27,7 @@ public class HotelChange extends EventChange {
             hotel.rooms.add(event.getRoomID());
         });
 
-        apply((RestaurantCreated event) ->{
+        apply((RestaurantAssigned event) ->{
             hotel.restaurants.add(event.getRestaurantID());
         });
 

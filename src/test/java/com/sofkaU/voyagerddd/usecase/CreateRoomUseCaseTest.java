@@ -1,17 +1,16 @@
 package com.sofkaU.voyagerddd.usecase;
 
 import co.com.sofka.business.generic.UseCaseHandler;
-import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
 import com.sofkaU.voyagerddd.domain.general.Cost;
 import com.sofkaU.voyagerddd.domain.hotel.values.HotelID;
+import com.sofkaU.voyagerddd.domain.hotel.values.HotelName;
 import com.sofkaU.voyagerddd.domain.room.commands.CreateRoom;
 import com.sofkaU.voyagerddd.domain.room.events.RoomCreated;
 import com.sofkaU.voyagerddd.domain.room.values.RoomID;
 import com.sofkaU.voyagerddd.domain.room.values.RoomNumber;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,10 +26,12 @@ class CreateRoomUseCaseTest {
     void CreateRoomTest(){
 
         //Arrange
-        var hotelID = HotelID.of(HOTEL_ID);
-        var roomID = RoomID.of(ROOM_ID);
-        var roomNumber = new RoomNumber(101);
-        var roomCost = new Cost(100);
+
+        var hotelID = HotelID.of("Elysia!");
+
+        var roomID = RoomID.of("Cydonia!");
+        var roomNumber = new RoomNumber(1618);
+        var roomCost = new Cost(42);
 
         CreateRoom command = new CreateRoom(roomID,hotelID,roomNumber,roomCost);
         CreateRoomUseCase useCase = new CreateRoomUseCase();
@@ -45,8 +46,8 @@ class CreateRoomUseCaseTest {
         RoomCreated event = (RoomCreated) events.get(0);
 
         //Assert
-        assertEquals(101, event.getRoomNumber().value());
-        assertEquals(100, event.getCost().value());
+        assertEquals(command.getRoomNumber().value(), event.getRoomNumber().value());
+        assertEquals(command.getCost().value(), event.getCost().value());
     }
 
 }
