@@ -35,11 +35,11 @@ class AssignRestaurantToHotelUseCaseTest {
 
         //Arrange
         var hotelID = HotelID.of("Elysia!");
+
         var hotelName = new HotelName("Ad Astra per Aspera!");
         HotelCreated hotelCreated = new HotelCreated(hotelName);
         hotelCreated.setAggregateRootId(hotelID.value());
 
-        
         var restaurantID = RestaurantID.of("Cydonia!");
         var restaurantName = new RestaurantName("Lux Luceat Omnia!");
         RestaurantCreated event = new RestaurantCreated(hotelID, restaurantName);

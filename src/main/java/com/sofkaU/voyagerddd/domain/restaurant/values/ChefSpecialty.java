@@ -10,13 +10,7 @@ public class ChefSpecialty implements ValueObject<String> {
     private final String value;
 
     public ChefSpecialty(String value){
-        for (ChefSpecialties chefSpecialty : ChefSpecialties.values()){
-            if (chefSpecialty.name().equals(value)) {
-                this.value = value;
-                break;
-            }
-        }
-        throw new IllegalArgumentException("Chef Specialty does not exist, consider adding it!");
+        this.value = value;
     }
 
     @Override
